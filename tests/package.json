@@ -1,0 +1,13 @@
+{
+  "name": "rooty-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Kory Nunn <knunn187@gmail.com>",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "tape": "^4.0.0"
+  }
+}

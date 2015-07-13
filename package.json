@@ -1,0 +1,26 @@
+{
+  "name": "rooty",
+  "version": "1.0.0",
+  "description": "allow root-of-project (closest package.json) requires  in node with `^`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kory Nunn <knunn187@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "find-root": "^0.1.1"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KoryNunn/rooty.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KoryNunn/rooty/issues"
+  },
+  "homepage": "https://github.com/KoryNunn/rooty#readme"
+}
