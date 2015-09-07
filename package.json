@@ -9,12 +9,14 @@
   "author": "Kory Nunn <knunn187@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "find-root": "^0.1.1"
+    "caroot": "^1.0.0"
   },
   "directories": {
     "test": "tests"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "tape": "^4.2.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KoryNunn/rooty.git"
