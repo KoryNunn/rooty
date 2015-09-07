@@ -3,11 +3,5 @@ var caroot = require('caroot'),
     originalLoad = Module._load;
 
 Module._load = function(request, parent, isMain) {
-    var replacement = caroot(request, parent.filename);
-
-    if (replacement) {
-        return originalLoad(replacement, parent, isMain);
-    }
-
-    return originalLoad(request, parent, isMain);
+    return originalLoad(caroot(request, parent.filename), parent, isMain);
 };
