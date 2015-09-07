@@ -1,6 +1,6 @@
 {
   "name": "rooty",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Allow root-of-project (closest package.json) requires in node with `^`",
   "main": "index.js",
   "scripts": {
