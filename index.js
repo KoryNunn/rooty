@@ -1,17 +1,9 @@
-var findRoot = require('find-root'),
+var caroot = require('caroot'),
     Module = require('module'),
     originalLoad = Module._load;
 
-function getReplacement(file, currentPath) {
-    if(file.charAt(0) === '^') {
-        return findRoot(currentPath) + '/' + file.slice(1);
-    }
-
-    return null;
-}
-
 Module._load = function(request, parent, isMain) {
-    var replacement = getReplacement(request, parent.filename);
+    var replacement = caroot(request, parent.filename);
 
     if (replacement) {
         return originalLoad(replacement, parent, isMain);
