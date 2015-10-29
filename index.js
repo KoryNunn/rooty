@@ -3,10 +3,14 @@ var caroot = require('caroot'),
     originalLoad = Module._load,
     originalResolve = Module._resolveFilename;
 
-Module._load = function(request, parent, isMain) {
-    return originalLoad(caroot(request, parent.filename), parent, isMain);
-};
+function init(rootPath){
+    Module._resolveFilename = function(path, passedModule){
+        return originalResolve(caroot(path, passedModule.filename, rootPath), passedModule);
+    };
 
-Module._resolveFilename = function(path, passedModule){
-    return originalResolve(caroot(path, passedModule.filename), passedModule);
-};
+    Module._load = function(request, parent, isMain) {
+        return originalLoad(caroot(request, parent.filename, rootPath), parent, isMain);
+    };
+}
+
+module.exports = init;
