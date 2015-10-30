@@ -8,9 +8,19 @@ Require rooty as the first thing in your entry file:
 
 ```javascript
 
-require('rooty');
+var rooty = require('rooty');
+
+rooty();
 
 // more app code
+
+```
+
+Can also take an optional root path
+
+``` javascript
+
+rooty('./server');
 
 ```
 
